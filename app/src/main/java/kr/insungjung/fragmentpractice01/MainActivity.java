@@ -132,7 +132,7 @@ public class MainActivity extends BaseActivity {
                 } else if (act.viewPager.getCurrentItem() == 1) {
                     // currentFrag가 FragmentTwo 이다
                     ((FragmentTwo) currentFrag).changeTextMsg(act.testEdt.getText().toString());
-                } else if (act.viewPager.getCurrentItem() == 2){
+                } else if (act.viewPager.getCurrentItem() == 2) {
                     ((FragmentThree) currentFrag).changeTextMsg(act.testEdt.getText().toString());
                 }
             }
@@ -148,8 +148,15 @@ public class MainActivity extends BaseActivity {
         act.viewPager.setAdapter(pagerAdapter);
     }
 
+    public void setCustomTitle(String inputTitle) {
+        setTitle(String.format("입력값:%s", inputTitle));
+        act.testEdt.setText(inputTitle);
+    }
+
     @Override
     public void bindViews() {
         act = DataBindingUtil.setContentView(this, R.layout.activity_main);
     }
+
+
 }
