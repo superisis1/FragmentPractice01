@@ -119,7 +119,18 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
 
                 /*버튼이 눌렸을 때 하고 싶은 일?
-                * */
+                 * 1. 지금 보여지고 있는 프래그먼트에 접근
+                 * => 현재 작성중인 메인액티비티에서?*/
+                Fragment currentFrag = pagerAdapter.getItem(act.viewPager.getCurrentItem());
+
+                /**/
+                if (act.viewPager.getCurrentItem() == 0) {
+                    // currentFrag가 FragmentOne 이다!
+                } else if (act.viewPager.getCurrentItem() == 1) {
+                    // currentFrag가 FragmentTwo 이다
+                } else if (act.viewPager.getCurrentItem() == 3){
+
+                }
             }
         });
     }
