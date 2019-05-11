@@ -34,6 +34,10 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
 
                 act.viewPager.setCurrentItem(0);
+
+                act.changeFragOneBtn.setText("현재 선택됨");
+                act.changeFragTwoBtn.setText("2번 선택됨");
+                act.changeFragThreeBtn.setText("3번 선택됨");
             }
         });
 
@@ -50,6 +54,10 @@ public class MainActivity extends BaseActivity {
                /*2번 화면 버튼 누름 => 2번째 페이지 보여줌*/
 
                 act.viewPager.setCurrentItem(1);
+
+                act.changeFragOneBtn.setText("1번 선택됨");
+                act.changeFragTwoBtn.setText("현재 선택됨");
+                act.changeFragThreeBtn.setText("3번 선택됨");
             }
         });
 
@@ -58,6 +66,10 @@ public class MainActivity extends BaseActivity {
             public void onClick(View v) {
 
                 act.viewPager.setCurrentItem(2);
+
+                act.changeFragOneBtn.setText("1번 선택됨");
+                act.changeFragTwoBtn.setText("2번 선택됨");
+                act.changeFragThreeBtn.setText("현재 선택됨");
             }
         });
     }
