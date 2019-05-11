@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import kr.insungjung.fragmentpractice01.Adapters.PagerAdapter;
 import kr.insungjung.fragmentpractice01.databinding.ActivityMainBinding;
 import kr.insungjung.fragmentpractice01.fragments.FragmentTwo;
 
@@ -28,16 +29,35 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        act.changeFragOneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                act.viewPager.setCurrentItem(0);
+            }
+        });
+
         /*프래그먼트 2번 버튼 클릭*/
         act.changeFragTwoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment fr = new FragmentTwo();
-
+               /* Fragment fragment = new FragmentTwo();
                 FragmentManager fragmentManager = getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-                fragmentTransaction.replace(R.id.fragOne, fr);
-                fragmentTransaction.commit();
+                fragmentTransaction.replace(R.id.fragOne, fragment);
+                fragmentTransaction.commit();*/
+
+               /*2번 화면 버튼 누름 => 2번째 페이지 보여줌*/
+
+                act.viewPager.setCurrentItem(1);
+            }
+        });
+
+        act.changeFragThreeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                act.viewPager.setCurrentItem(2);
             }
         });
     }
@@ -45,6 +65,8 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setValues() {
 
+        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), 3);
+        act.viewPager.setAdapter(pagerAdapter);
     }
 
     @Override

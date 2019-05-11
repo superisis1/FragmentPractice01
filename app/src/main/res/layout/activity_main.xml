@@ -13,57 +13,76 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">-->
 
-       <!-- <LinearLayout
+        <!-- <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">-->
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">-->
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/changeFragOneBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="1번 프래그먼트" />
+
+            <Button
+                android:id="@+id/changeFragTwoBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="2번 프래그먼트" />
+
+            <Button
+                android:id="@+id/changeFragThreeBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="3번 프래그먼트" />
+
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/changeFragOneBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="1번 프래그먼트" />
+                <fragment
+                    android:id="@+id/fragOne"
+                    class="kr.insungjung.fragmentpractice01.fragments.FragmentOne"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent" />
 
-                <Button
-                    android:id="@+id/changeFragTwoBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="2번 프래그먼트" />
+                <fragment
+                    android:id="@+id/fragTwo"
+                    class="kr.insungjung.fragmentpractice01.fragments.FragmentTwo"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent" />
 
-                <Button
-                    android:id="@+id/changeFragThreeBtn"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="3번 프래그먼트" />
-
+                <fragment
+                    android:id="@+id/fragThree"
+                    class="kr.insungjung.fragmentpractice01.fragments.FragmentThree"
+                    android:layout_width="300dp"
+                    android:layout_height="match_parent" />
 
             </LinearLayout>
 
-            <fragment
-                android:id="@+id/fragOne"
-                class="kr.insungjung.fragmentpractice01.fragments.FragmentOne"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <!--                <fragment
-                                android:id="@+id/fragTwo"
-                                class="kr.insungjung.fragmentpractice01.fragments.FragmentTwo"
-                                android:layout_width="match_parent"
-                                android:layout_height="250dp" />
-
-                            <fragment
-                                android:id="@+id/fragThree"
-                                class="kr.insungjung.fragmentpractice01.fragments.FragmentThree"
-                                android:layout_width="match_parent"
-                                android:layout_height="250dp" />-->
+        </HorizontalScrollView>
 
         <!--</LinearLayout>-->
 
