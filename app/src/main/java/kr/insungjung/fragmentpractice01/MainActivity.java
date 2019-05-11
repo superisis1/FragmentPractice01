@@ -12,6 +12,7 @@ import android.view.View;
 import kr.insungjung.fragmentpractice01.Adapters.PagerAdapter;
 import kr.insungjung.fragmentpractice01.databinding.ActivityMainBinding;
 import kr.insungjung.fragmentpractice01.fragments.FragmentOne;
+import kr.insungjung.fragmentpractice01.fragments.FragmentThree;
 import kr.insungjung.fragmentpractice01.fragments.FragmentTwo;
 
 public class MainActivity extends BaseActivity {
@@ -130,8 +131,9 @@ public class MainActivity extends BaseActivity {
                     ((FragmentOne) currentFrag).changeTextMsg(act.testEdt.getText().toString());
                 } else if (act.viewPager.getCurrentItem() == 1) {
                     // currentFrag가 FragmentTwo 이다
-                } else if (act.viewPager.getCurrentItem() == 3){
-
+                    ((FragmentTwo) currentFrag).changeTextMsg(act.testEdt.getText().toString());
+                } else if (act.viewPager.getCurrentItem() == 2){
+                    ((FragmentThree) currentFrag).changeTextMsg(act.testEdt.getText().toString());
                 }
             }
         });

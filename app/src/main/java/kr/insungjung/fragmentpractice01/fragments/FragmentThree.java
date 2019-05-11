@@ -32,4 +32,8 @@ public class FragmentThree extends Fragment {
         binding.myTextView03.setText("세번째 프래그먼트");
     }
 
+    public void changeTextMsg(String inputMessage) {
+        binding.myTextView03.setText(inputMessage);
+    }
+
 }
