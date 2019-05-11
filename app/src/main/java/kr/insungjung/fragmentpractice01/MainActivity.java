@@ -10,12 +10,13 @@ public class MainActivity extends BaseActivity {
 
     ActivityMainBinding act;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         // setContentView(R.layout.activity_main); // bindVeiws() 내부로 이동
-
+        bindViews();
+        setupEvents();
+        setValues();
 
     }
 
