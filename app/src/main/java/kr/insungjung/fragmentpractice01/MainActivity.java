@@ -30,6 +30,12 @@ public class MainActivity extends BaseActivity {
     @Override
     public void setupEvents() {
 
+        // 디폴트 - 1번 페이지 선택
+        act.viewPager.setCurrentItem(0);
+        act.changeFragOneBtn.setText("현재 선택됨");
+        act.changeFragTwoBtn.setText("2번 선택됨");
+        act.changeFragThreeBtn.setText("3번 선택됨");
+
         act.changeFragOneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -91,8 +97,8 @@ public class MainActivity extends BaseActivity {
                     act.changeFragThreeBtn.setText("3번 선택됨");
                 } else if (i == 1) {
                     act.changeFragOneBtn.setText("1번 선택됨");
-                    act.changeFragTwoBtn.setText("2번 선택됨");
-                    act.changeFragThreeBtn.setText("현재 선택됨");
+                    act.changeFragTwoBtn.setText("현재 선택됨");
+                    act.changeFragThreeBtn.setText("3번 선택됨");
                 } else if (i == 2) {
                     act.changeFragOneBtn.setText("1번 선택됨");
                     act.changeFragTwoBtn.setText("2번 선택됨");
