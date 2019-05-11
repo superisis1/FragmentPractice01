@@ -35,6 +35,9 @@ public class FragmentOne extends Fragment {
 
         binding.myTextView.setText("데이터 바인딩 예시");
 
+    }
 
+    public void changeTextMsg(String inputMessage) {
+        binding.myTextView.setText(inputMessage);
     }
 }
