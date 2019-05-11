@@ -9,18 +9,36 @@
         android:orientation="vertical"
         tools:context=".MainActivity">
 
-        <fragment
-            android:id="@+id/fragOne"
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            class="kr.insungjung.fragmentpractice01.fragments.FragmentOne" />
+            android:layout_height="wrap_content">
 
-        <fragment
-            android:id="@+id/fragTwo"
-            android:layout_width="match_parent"
-            android:layout_height="300dp"
-            class="kr.insungjung.fragmentpractice01.fragments.FragmentTwo" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
+                <fragment
+                    android:id="@+id/fragOne"
+                    class="kr.insungjung.fragmentpractice01.fragments.FragmentOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+                <fragment
+                    android:id="@+id/fragTwo"
+                    class="kr.insungjung.fragmentpractice01.fragments.FragmentTwo"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+                <fragment
+                    android:id="@+id/fragThree"
+                    class="kr.insungjung.fragmentpractice01.fragments.FragmentThree"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp" />
+
+            </LinearLayout>
+
+        </ScrollView>
 
     </LinearLayout>
 </layout>
