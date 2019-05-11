@@ -17,6 +17,8 @@ public class MainActivity extends BaseActivity {
 
     ActivityMainBinding act;
 
+    PagerAdapter pagerAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -111,6 +113,15 @@ public class MainActivity extends BaseActivity {
 
             }
         });
+
+        act.okBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                /*버튼이 눌렸을 때 하고 싶은 일?
+                * */
+            }
+        });
     }
 
     @Override
@@ -118,7 +129,7 @@ public class MainActivity extends BaseActivity {
 
         act.viewPager.setOffscreenPageLimit(4); // 프래그먼의 개수와 맞춰준다.
 
-        PagerAdapter pagerAdapter = new PagerAdapter(getSupportFragmentManager(), 3);
+        pagerAdapter = new PagerAdapter(getSupportFragmentManager(), 3);
         act.viewPager.setAdapter(pagerAdapter);
     }
 

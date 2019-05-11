@@ -12,6 +12,8 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
 
     int mNumOfTabs;
 
+    Fragment frag1, frag2, frag3;
+
     public PagerAdapter(FragmentManager fragmentManager, int numOfTabs) {
         super(fragmentManager);
         mNumOfTabs = numOfTabs;
@@ -23,13 +25,22 @@ public class PagerAdapter extends FragmentStatePagerAdapter {
         Fragment fragment = null;
 
         if (i == 0) {
-            FragmentOne frag1 = new FragmentOne();
+            // 재사용성을 위해 Null 일 때만 객채화한다.
+            if (frag1 == null) {
+                frag1 = new FragmentOne();
+            }
             fragment = frag1;
-        } else if (i == 1) {
-            FragmentTwo frag2 = new FragmentTwo();
+        }
+        else if (i == 1) {
+            if (frag2 == null) {
+                frag2 = new FragmentTwo();
+            }
             fragment = frag2;
-        } else if (i == 2) {
-            FragmentThree frag3 = new FragmentThree();
+        }
+        else if (i == 2) {
+            if (frag3 == null) {
+                frag3 = new FragmentThree();
+            }
             fragment = frag3;
         }
 
